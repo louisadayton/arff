@@ -1,0 +1,21 @@
+@RELATION	output.txt
+@ATTRIBUTE	Sample	string
+@ATTRIBUTE	Age	{young,old}
+@ATTRIBUTE	Size	{small,medium,big}
+@ATTRIBUTE	Status	{living,dead}
+@ATTRIBUTE	CNA__A	{nan,yes,maybe,no}
+@ATTRIBUTE	CNA__B	{nan,yes,medium,no}
+@ATTRIBUTE	CNA__C	{nan,yes,maybe}
+@ATTRIBUTE	CNA__D	{nan,yes,no}
+@DATA
+A,old,big,living,yes,nan,nan,nan,
+B,young,big,living,nan,no,nan,nan,
+C,young,small,living,nan,nan,maybe,nan,
+D,young,big,dead,nan,nan,nan,yes,
+E,old,small,dead,nan,yes,nan,nan,
+F,old,medium,living,no,nan,nan,nan,
+G,old,big,dead,nan,nan,nan,nan,
+H,young,medium,dead,nan,nan,yes,nan,
+I,young,small,living,nan,medium,nan,nan,
+J,old,small,living,maybe,nan,nan,nan,
+K,old,medium,dead,nan,nan,nan,no,

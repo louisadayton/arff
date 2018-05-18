@@ -1,0 +1,12 @@
+Sample	Age	Size	Status	CNA__A	CNA__B	CNA__C	CNA__D
+0	A	old	big	living	yes			
+1	B	young	big	living		no		
+2	C	young	small	living			maybe	
+3	D	young	big	dead				yes
+4	E	old	small	dead		yes		
+5	F	old	medium	living	no			
+6	G	old	big	dead				
+7	H	young	medium	dead			yes	
+8	I	young	small	living		medium		
+9	J	old	small	living	maybe			
+10	K	old	medium	dead				no
