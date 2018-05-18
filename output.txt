@@ -1,21 +1,23 @@
-@RELATION	output.txt
-@ATTRIBUTE	Sample	string
-@ATTRIBUTE	Age	{young,old}
-@ATTRIBUTE	Size	{small,medium,big}
-@ATTRIBUTE	Status	{living,dead}
-@ATTRIBUTE	CNA__A	{nan,yes,maybe,no}
-@ATTRIBUTE	CNA__B	{nan,yes,medium,no}
-@ATTRIBUTE	CNA__C	{nan,yes,maybe}
-@ATTRIBUTE	CNA__D	{nan,yes,no}
+@RELATION	output
+@ATTRIBUTE	Sample	NUMERIC
+@ATTRIBUTE	Age	string
+@ATTRIBUTE	Size	{old er,young,old}
+@ATTRIBUTE	Status	{small,medium,big}
+@ATTRIBUTE	CNA__A	{dead,living}
+@ATTRIBUTE	CNA__B	{yes,no,?,maybe}
+@ATTRIBUTE	CNA__C	{?,no,yes,medium}
+@ATTRIBUTE	CNA__D	{?,yes,maybe}
+@ATTRIBUTE	CNA_E	{?,no,yes}
+@ATTRIBUTE	CNA_F	NUMERIC
 @DATA
-A,old,big,living,yes,nan,nan,nan,
-B,young,big,living,nan,no,nan,nan,
-C,young,small,living,nan,nan,maybe,nan,
-D,young,big,dead,nan,nan,nan,yes,
-E,old,small,dead,nan,yes,nan,nan,
-F,old,medium,living,no,nan,nan,nan,
-G,old,big,dead,nan,nan,nan,nan,
-H,young,medium,dead,nan,nan,yes,nan,
-I,young,small,living,nan,medium,nan,nan,
-J,old,small,living,maybe,nan,nan,nan,
-K,old,medium,dead,nan,nan,nan,no,
+0,A,'old er',big,living,yes,?,?,?,3.0
+1,B,young,big,living,?,no,?,?,4.0
+2,C,young,small,living,?,?,maybe,?,5.0
+3,D,young,big,dead,?,?,?,yes,4.5
+4,E,old,small,dead,?,yes,?,?,234.0
+5,F,old,medium,living,no,?,?,?,8.0
+6,G,old,big,dead,?,?,?,?,?
+7,H,young,medium,dead,?,?,yes,?,2.0
+8,I,young,small,living,?,medium,?,?,45.0
+9,J,old,small,living,maybe,?,?,?,34.2
+10,K,old,medium,dead,?,?,?,no,1.0

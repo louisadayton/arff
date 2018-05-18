@@ -3,15 +3,16 @@ import re
 
 def isNumeric(column): 
     for item in column:
-        if type(item) != float and type(item) != int:
+        if type(item) != float and type(item) != int and item != "?":
             return False   
     return True
 
 df = pd.read_table("cool_file.txt")
+df = df.fillna("?")
 fileName = "output.txt"
 writeFile = open(fileName, 'w')
-pattern = r"\.*"
-relation = fileName.rstrip(pattern)
+pattern = r"\..*"
+relation = re.sub(pattern, "", fileName)
 writeFile.write("@RELATION\t" + relation + "\n")
 for colName in list(df):		
     writeFile.write("@ATTRIBUTE\t" + colName)
@@ -31,8 +32,12 @@ for colName in list(df):
             writeFile.write("}\n")
 writeFile.write("@DATA\n")
 for line in df.values:
-    for word in line:
-        writeFile.write(str(word) + ",")
+    writeFile.write(str(line[0]))
+    for i in range(1, len(line)):
+        if " " in str(line[i]):
+            writeFile.write(",'" + str(line[i]) + "'")
+            continue 
+        writeFile.write("," + str(line[i])) 
     writeFile.write("\n")
  
  
