@@ -1,23 +1,24 @@
 @RELATION	output
 @ATTRIBUTE	Sample	NUMERIC
 @ATTRIBUTE	Age	string
-@ATTRIBUTE	Size	{old er,young,old}
-@ATTRIBUTE	Status	{small,medium,big}
+@ATTRIBUTE	Size	{old,young,old er}
+@ATTRIBUTE	Status	{big,medium,small}
 @ATTRIBUTE	CNA__A	{dead,living}
-@ATTRIBUTE	CNA__B	{yes,no,?,maybe}
-@ATTRIBUTE	CNA__C	{?,no,yes,medium}
-@ATTRIBUTE	CNA__D	{?,yes,maybe}
-@ATTRIBUTE	CNA_E	{?,no,yes}
+@ATTRIBUTE	CNA__B	{maybe,yes,no,?}
+@ATTRIBUTE	CNA__C	{medium,yes,no,?}
+@ATTRIBUTE	CNA__D	{maybe,yes,?}
+@ATTRIBUTE	CNA_E	{yes,no,?}
 @ATTRIBUTE	CNA_F	NUMERIC
+@ATTRIBUTE	Date	DATE
 @DATA
-0,A,'old er',big,living,yes,?,?,?,3.0
-1,B,young,big,living,?,no,?,?,4.0
-2,C,young,small,living,?,?,maybe,?,5.0
-3,D,young,big,dead,?,?,?,yes,4.5
-4,E,old,small,dead,?,yes,?,?,234.0
-5,F,old,medium,living,no,?,?,?,8.0
-6,G,old,big,dead,?,?,?,?,?
-7,H,young,medium,dead,?,?,yes,?,2.0
-8,I,young,small,living,?,medium,?,?,45.0
-9,J,old,small,living,maybe,?,?,?,34.2
-10,K,old,medium,dead,?,?,?,no,1.0
+0,A,'old er',big,living,yes,?,?,?,3.0,07/31/11
+1,B,young,big,living,?,no,?,?,4.0,?
+2,C,young,small,living,?,?,maybe,?,5.0,01/11/13
+3,D,young,big,dead,?,?,?,yes,4.5,02/02/78
+4,E,old,small,dead,?,yes,?,?,234.0,09/29/98
+5,F,old,medium,living,no,?,?,?,8.0,08/29/89
+6,G,old,big,dead,?,?,?,?,?,03/21/77
+7,H,young,medium,dead,?,?,yes,?,2.0,02/20/99
+8,I,young,small,living,?,medium,?,?,45.0,?
+9,J,old,small,living,maybe,?,?,?,34.2,12/25/18
+10,K,old,medium,dead,?,?,?,no,1.0,11/02/96

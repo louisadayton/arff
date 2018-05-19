@@ -1,10 +1,20 @@
 import pandas as pd
 import re
+import datetime as dt
 
 def isNumeric(column): 
     for item in column:
         if type(item) != float and type(item) != int and item != "?":
             return False   
+    return True
+
+def isDate(column):
+    for item in column: 
+        try:
+            pd.to_datetime(item)
+        except:
+            if item != "?": 
+                return False
     return True
 
 df = pd.read_table("cool_file.txt")
@@ -18,7 +28,9 @@ for colName in list(df):
     writeFile.write("@ATTRIBUTE\t" + colName)
     options = set([])
     if isNumeric(df[colName]) == True:
-        writeFile.write("\tNUMERIC\n") 
+        writeFile.write("\tNUMERIC\n")
+    elif isDate(df[colName]) == True:
+        writeFile.write("\tDATE\n") 
     else: 
         for value in df[colName]:
             options.add(value)
