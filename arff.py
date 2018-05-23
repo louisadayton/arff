@@ -2,12 +2,14 @@ import pandas as pd
 import re
 import datetime as dt
 
+#Return true if the values in the column are numeric
 def isNumeric(column): 
     for item in column:
         if type(item) != float and type(item) != int and item != "?":
             return False   
     return True
 
+#Return true if the values in the column are dates
 def isDate(column):
     for item in column: 
         try:
@@ -17,13 +19,17 @@ def isDate(column):
                 return False
     return True
 
+#This is the stuff that will need to be tweaked
+#Right now I read in a file as a pandas dataframe
 df = pd.read_table("cool_file.txt")
 df = df.fillna("?")
 fileName = "output.arff"
+
 writeFile = open(fileName, 'w')
 pattern = r"\..*"
 relation = re.sub(pattern, "", fileName)
 writeFile.write("@RELATION\t" + relation + "\n")
+#Check the type for each column and write them in as attributes
 for colName in list(df):		
     writeFile.write("@ATTRIBUTE\t" + colName)
     options = set([])
@@ -47,6 +53,8 @@ for colName in list(df):
             for o in options:
                 writeFile.write("," + str(o))
             writeFile.write("}\n")
+#Write out the data
+#If there's a space in the value, surround it with quotes
 writeFile.write("@DATA\n")
 for line in df.values:
     writeFile.write(str(line[0]))
