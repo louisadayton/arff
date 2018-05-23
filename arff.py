@@ -19,7 +19,7 @@ def isDate(column):
 
 df = pd.read_table("cool_file.txt")
 df = df.fillna("?")
-fileName = "output.txt"
+fileName = "output.arff"
 writeFile = open(fileName, 'w')
 pattern = r"\..*"
 relation = re.sub(pattern, "", fileName)
@@ -30,10 +30,15 @@ for colName in list(df):
     if isNumeric(df[colName]) == True:
         writeFile.write("\tNUMERIC\n")
     elif isDate(df[colName]) == True:
-        writeFile.write("\tDATE\n") 
+        writeFile.write("\tDATE\tyyyy-MM-dd\n") 
+        for value in df[colName]:
+            fullDate = pd.to_datetime(value, errors = 'ignore')
+            date = str(fullDate).split(" ")[0] 
+            df = df.replace(value, date) 
     else: 
         for value in df[colName]:
-            options.add(value)
+            if value != "?": 
+                options.add(value)
         if len(options) == len(df[colName]):
             writeFile.write("\tstring\n")
         else:
