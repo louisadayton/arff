@@ -1,12 +1,12 @@
 @RELATION	output
 @ATTRIBUTE	Age	string
 @ATTRIBUTE	Size	{old,young}
-@ATTRIBUTE	Status	{medium,big,small}
+@ATTRIBUTE	Status	{small,big,medium}
 @ATTRIBUTE	CNA__A	{living,dead}
-@ATTRIBUTE	CNA__B	{maybe,yes,no}
-@ATTRIBUTE	CNA__C	{medium,no,yes}
-@ATTRIBUTE	CNA__D	{yes,maybe}
-@ATTRIBUTE	CNA_E	{yes,no}
+@ATTRIBUTE	CNA__B	{no,maybe,yes}
+@ATTRIBUTE	CNA__C	{no,yes,medium}
+@ATTRIBUTE	CNA__D	{maybe,yes}
+@ATTRIBUTE	CNA_E	{no,yes}
 @ATTRIBUTE	CNA_F	NUMERIC
 @ATTRIBUTE	Date	DATE	yyyy-MM-dd
 @DATA
