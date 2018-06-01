@@ -21,12 +21,32 @@ df = pd.read_table("cool_file.txt", sep="\t")
 
 import arff
 arff.toARFF(df, "output_file.arff")
+```
+```python
+import pandas as pd
 
-# TODO: add arff->pd example
+import arff_to_pandas
+arff_to_pandas.arffToPandas("input_file.csv)
 ```
 
 ### Pandas Dataframe &harr; GCT
 
 ```python
-# TODO: add examples
+import pandas as pd
+df = pd.read_table("input_file.csv")
+
+import gct
+gct.toGCT(df, "output_file.gct")
 ```
+
+```python
+import pandas as pd
+
+import gct_to_pandas
+gct_to_pandas.gctToPandas("input_file.csv")
+```
+
+
+## Other
+
+This is part of the [ShapeShifter](https://github.com/srp33/ShapeShifter) project.
