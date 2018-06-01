@@ -1,0 +1,15 @@
+#1.2
+11	8
+Age	Size	Status	CNA__A	CNA__B	CNA__C	CNA__D	CNA_E	CNA_F	Date
+	
+A	old	big	living	yes				3	07/31/13	
+B	young	big	living		no			4		
+C	young	small	living			maybe		5	01/11/21	
+D	young	big	dead				yes	4.5	02/02/00	
+E	old	small	dead		yes			234	09/29/10	
+F	old	medium	living	no				8	08/29/89	
+G	old	big	dead						03/21/77	
+H	young	medium	dead			yes		2	02/20/99	
+I	young	small	living		medium			45		
+J	old	small	living	maybe				34.2	12/25/18	
+K	old	medium	dead				no	1	11/02/96	

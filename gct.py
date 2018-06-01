@@ -15,4 +15,6 @@ def toGCT(df, fileName):
         for word in line:
             writeFile.write(str(word) + "\t")
         writeFile.write("\n")
-    writeFile.close()	
+    writeFile.close()
+
+        
